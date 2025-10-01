@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>    
+  <meta charset="UTF-8" />    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+  <title>CSS Project</title>   
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />    
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />    
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" /> 
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/> 
+
+  <!-- CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url("photo.jpg"); /* Put image in same folder */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+    }
+
+    .main_box {
+      position: relative;
+    }
+
+    /* Sidebar */
+    .sidebar_menu {
+      position: fixed;
+      left: -300px;
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      transition: all 0.3s ease;
+      padding-top: 20px;
+    }
+
+    #check:checked ~ .sidebar_menu {
+      left: 0;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo a {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu ul li {
+      padding: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .menu ul li i {
+      width: 20px;
+    }
+
+    /* Toggle Buttons */
+    .btn_one {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .btn_two {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Social Media */
+    .social_media {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .social_media ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .social_media ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .social_media ul li a {
+      color: white;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .social_media ul li a:hover {
+      color: #ff9800;
+    }
+  </style>
+</head>  
+
+<body>
+  <div class="main_box">
+    <input type="checkbox" id="check" />
+    
+    <!-- Open Button -->
+    <div class="btn_one">
+      <label for="check" style="color: white">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar_menu">
+      <div class="logo">
+        <a href="#">Apna College</a>
+      </div>
+
+      <!-- Close Button -->
+      <div class="btn_two">
+        <label for="check" style="color: grey">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="menu">
+        <ul>
+          <li><i class="fa-solid fa-image"></i> <a href="#">Gallery</a></li>
+          <li><i class="fa-solid fa-arrow-up-right-from-square"></i> <a href="#">Shortcuts</a></li>
+          <li><i class="fa-solid fa-photo-film"></i> <a href="#">Exhibits</a></li>
+          <li><i class="fa-solid fa-calendar-days"></i> <a href="#">Events</a></li>
+          <li><i class="fa-solid fa-store"></i> <a href="#">Store</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="#">Contact</a></li>
+          <li><i class="fa-regular fa-comments"></i> <a href="#">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="social_media">
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
