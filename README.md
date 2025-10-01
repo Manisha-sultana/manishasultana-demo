@@ -78,5 +78,15 @@
         </div>
       </div>
     </div>
+    *{
+	margin:0;
+	pading:0;
+	font-family: "poppins",sans-serif;
+}
+.main_box{
+	background-image: url("camera.jpg");
+	height:100vh;
+	background-size: cover;
+}
   </body>
 </html>
